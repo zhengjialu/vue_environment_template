@@ -1,27 +1,26 @@
 <template>
-  <p>{{ greeting }} World!</p>
+  <div>
+    <p>{{ gethelloContent }} World!</p>
+    <el-button @click="changeStore">store 测试</el-button>
+  </div>
 </template>
 
 <script>
-// import io from './io'
-
-module.exports = {
+export default {
   data: function() {
     return {
-      greeting: "Hello"
+      greeting: 'xxxx',
     };
   },
   methods: {
-    // async testIo() {
-    //   try {
-    //     const {content} = await io.testIo({
-    //       ':id': 11,
-    //     })
-    //     this.content = content.name
-    //   } catch(e) {
-    //     this.$message.error(e.message)
-    //   }
-    // }
+    changeStore() {
+      this.$store.commit('helloStore/increment')
+    }
+  },
+  computed: {
+    gethelloContent() {
+      return this.$store.state.helloStore.helloContent
+    }
   }
 };
 </script>

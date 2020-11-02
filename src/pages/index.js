@@ -1,8 +1,6 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
-import VueRouter from 'vue-router'
 import { Button, Select, Menu, Submenu, MenuItem, Container, Header, Main, Footer } from 'element-ui'
-
+import store from '../store'
 import router from '../router'
 import Frame from '../layout/frame'
 
@@ -17,10 +15,8 @@ plugins.forEach(item => {
   Vue.use(item)
 })
 
-Vue.use(Vuex)
-Vue.use(VueRouter)
-
 new Vue({
   router,
+  store,
   render: h => h(Frame),
 }).$mount('#app')

@@ -17,4 +17,4 @@ const io = requestIO.createIo('hello', {
   }
 })
 
-module.exports = io
+export default io

@@ -1,5 +1,9 @@
+import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import Hello from '../pages/page-hello'
+
+Vue.use(VueRouter)
 
 const routes = [
   {
