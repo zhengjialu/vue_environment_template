@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <p>{{ gethelloContent }} World!</p>
+  <div class="page-hello">
+    <p>{{ gethelloContent }} World! {{ greeting }}</p>
     <el-button @click="changeStore">store 测试</el-button>
+    <el-button @click="testIo">IO 测试</el-button>
   </div>
 </template>
 
 <script>
+import io from './io'
+
 export default {
   data: function() {
     return {
@@ -15,6 +18,17 @@ export default {
   methods: {
     changeStore() {
       this.$store.commit('helloStore/increment')
+    },
+    async testIo() {
+      try {
+        const {content} = await io.testIo({
+          ':id': 11,
+        })
+
+        this.greeting = content.name
+      } catch(e) {
+        this.$message.error(e.message)
+      }
     }
   },
   computed: {
@@ -25,9 +39,4 @@ export default {
 };
 </script>
 
-<style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
-</style>
+<style src="./hello.styl"></style>
