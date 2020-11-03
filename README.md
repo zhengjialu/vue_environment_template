@@ -33,7 +33,6 @@
 │   │   │   ├── index.js
 │   │   │   ├── nav.vue
 │   │   │   └── routerLink.js      路由链接配置
-│   │   └── sideber                项目导航栏
 │   ├── pages                      前端页面
 │   │   ├── index.js               全局组件注册
 │   │   └── page-hello             项目模块
