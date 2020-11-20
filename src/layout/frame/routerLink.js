@@ -1,6 +1,6 @@
 /**
  * 目前只处理了三级菜单
-*/
+ */
 
 const routeLink = [
   {
@@ -28,9 +28,9 @@ const routeLink = [
             key: '3-1-1',
             path: '/hello',
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
 ]
 

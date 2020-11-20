@@ -1,13 +1,16 @@
 {
   "presets": [
-    ["@babel/preset-env", {
-      "useBuiltIns": "entry",
-      "corejs": 3
-    }]
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry",
+        "corejs": 3
+      }
+    ]
   ],
   "plugins": [
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
-    ["@babel/plugin-proposal-class-properties", { "loose" : true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
     "@babel/plugin-transform-runtime",
     [
       "component",
@@ -19,12 +22,8 @@
   ],
   "env": {
     "test": {
-      "presets": [
-        "env"
-      ],
-      "plugins": [
-        "istanbul"
-      ]
+      "presets": ["env"],
+      "plugins": ["istanbul"]
     }
   }
 }

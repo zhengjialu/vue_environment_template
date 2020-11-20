@@ -12,15 +12,15 @@ const routes = [
     children: [
       {
         path: '/hello',
-        component: Hello
+        component: Hello,
       },
-    ]
+    ],
   },
-  { path: '/', redirect: '/hello'}
+  { path: '/', redirect: '/hello' },
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
 })
 
 export default router

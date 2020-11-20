@@ -6,7 +6,7 @@
       </el-header>
       <el-main>
         <p v-if="invalidRoute">没有匹配到页面</p>
-        <router-view></router-view>
+        <router-view />
       </el-main>
       <el-footer>Footer</el-footer>
     </el-container>
@@ -14,16 +14,16 @@
 </template>
 
 <script>
-import FrameNav from './nav.vue'
+  import FrameNav from './nav.vue'
 
-export default {
-  computed: {
-    invalidRoute () {
-      return !this.$route.matched || this.$route.matched.length === 0
-    }
-  },
-  components: { FrameNav }
-}
+  export default {
+    components: { FrameNav },
+    computed: {
+      invalidRoute() {
+        return !this.$route.matched || this.$route.matched.length === 0
+      },
+    },
+  }
 </script>
 
 <style src="./frame.styl"></style>

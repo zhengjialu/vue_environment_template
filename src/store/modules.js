@@ -1,7 +1,7 @@
 import helloStore from '../pages/page-hello/store'
 
 const modules = {
-  helloStore
+  helloStore,
 }
 
 export default modules

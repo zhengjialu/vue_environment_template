@@ -10,7 +10,7 @@ Vue.use(Vuex)
 
 const state = {
   count: 0,
-  globalContent: 'Hello'
+  globalContent: 'Hello',
 }
 
 // 全局 store 仓库
@@ -19,7 +19,7 @@ const store = new Vuex.Store({
   actions,
   mutations,
   getters,
-  modules
+  modules,
 })
 
 export default store
